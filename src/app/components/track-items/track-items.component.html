@@ -1,0 +1,92 @@
+<div id="cont-table">
+<table class="table table-bordered" [hidden]="loans.length===0">
+      <tr id="pd" class="thead-dark">
+            <th scope="col">Serial Number</th>
+            <th scope="col">Model</th>
+            <th scope="col">Operation Code</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Delivery Date</th>
+            <th scope="col">Delivery Mode</th>
+            <th scope="col"></th>
+        </tr>
+        <tr *ngFor="let loan of loans">
+            <td><b>{{loan.item.code}}</b></td>
+            <td>{{loan.item.model}}</td>
+            <td>{{loan.operationCode}}</td>
+            <td>{{loan.firstName}}</td>
+            <td>{{loan.lastName}}</td>
+            <td>{{loan.deliveryDate}}</td>
+            <td>{{loan.deliveryMode}}</td>
+            <td>
+                <button class= "btn btn-outline-primary my-2 my-sm-0" id="openLoanModal" data-toggle="modal"
+                    data-target="#returnModule" type="button" (click)="onSelectItem(loan)">
+                    <i class="fas fa-arrow-alt-circle-left"></i>   Return
+                </button>  
+            </td>
+        </tr>
+</table> 
+
+</div>
+
+
+<div class="modal fade" id="returnModule" tabindex="-1" role="dialog" 
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Download Return Module</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+
+        <form #returnForm="ngForm" (ngSubmit)="returnItem(returnForm, selectedLoan)">
+          <div class="form-group">
+            <label for="firstName">Born in</label>
+            <input type="email" class="form-control" name="bornAt"
+                aria-describedby="emailHelp" placeholder="Where beneficiary born" required ngModel class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="lastName">Date of birth</label>
+            <input type="text" class="form-control" name="dateOfBirth"
+                  placeholder="Beneficiary's date of birth" required ngModel class="form-control">
+                  <small>Write date in format dd/MM/yyyy</small>
+          </div>
+          <div class="form-group">
+            <label for="username">City</label>
+            <input type="text" class="form-control" name="city"
+                  placeholder="Beneficiary's city" required ngModel class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="username">Address</label>
+            <input type="text" class="form-control" name="address"
+                  placeholder="Beneficiary's address" required ngModel class="form-control">
+                  <small>Specify complete address (es. VIA LIBERTA/PIAZZA DEL POPOLO/VIALE ALGERI)</small>
+          </div>
+          <div class="form-group">
+            <label for="email">Civic number</label>
+            <input type="text" class="form-control" name="civicNumber"
+                    placeholder="Civic number" required ngModel class="form-control">
+          </div>
+
+        <!--<button type="submit" style="display: none;" id="new-user-save"></button> -->
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="return-module-close" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" >Confirm return</button>
+          </div>
+
+        </form>
+
+      </div> 
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="loans?.length == 0" class="alert alert-warning col-md_12" role="alert">
+                No loans found
+            </div>

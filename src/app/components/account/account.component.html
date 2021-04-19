@@ -1,0 +1,13 @@
+<body>
+    <form class="box" action="" method="post"
+         #modifyDataForm="ngForm" (ngSubmit)="modifyData(modifyDataForm.value)">
+        <h1>Your Data</h1>
+            <input type="text" name="username" placeholder="password" [(ngModel)]="user.username"> 
+            <input type="password" name="password" placeholder="Modify Password" ngModel>
+            <small style="color: aliceblue; margin-top: 0px;">Se non vuoi modificare la password, lascia pure vuoto</small>    
+            <input type="submit" name="" value="Modify">
+        <div class="col-md-12">
+        </div>
+    </form>
+
+</body>

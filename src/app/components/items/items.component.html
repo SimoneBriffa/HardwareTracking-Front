@@ -1,0 +1,27 @@
+<div id="cont-table">
+<table class="table table-bordered" >
+        <tr id="pd" class="thead-dark">
+            <th scope="col">Serial Number</th>
+            <th scope="col">Model</th>
+            <th scope="col">License</th>
+            <th scope="col">Date of Record</th>
+            <th scope="col">Available</th>
+            <th scope="col"></th>
+        </tr>
+        <tr *ngFor="let item of items">
+            <td><b>{{item.code}}</b></td>
+            <td>{{item.model}}</td>
+            <td>{{item.license}}</td>
+            <td>{{item.dateOfRecord}}</td>
+            <td>
+                <span [hidden]="item.lent" class="badge badge-success">Available</span>
+                <span [hidden]="!item.lent" class="badge badge-danger">Not available</span>
+            </td>
+            <td><button class="btn btn-outline-danger my-2 my-sm-0" 
+                (click)="delete(item.id)">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+</table> 
+</div>

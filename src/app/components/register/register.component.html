@@ -1,0 +1,27 @@
+<body>
+    <form class="box" action="" method="post"
+         #registerForm="ngForm" (ngSubmit)="onRegister(registerForm.value)">
+        <h1>REGISTER</h1>
+        <p class="text-muted"> Please enter your data</p>
+             <input type="text" name="firstName" placeholder="First Name"  
+                ngModel #firstNameInput="ngModel" required>
+            <input type="text" name="lastName" placeholder="Last Name"
+                ngModel #lastNameInput="ngModel" required> 
+            <input type="text" name="fiscalCode" placeholder="Fiscal Code"
+                ngModel #fiscalCodeInput="ngModel" required> 
+            <input type="text" name="email" placeholder="Email"
+                ngModel #emailInput="ngModel" required> 
+            <input type="text" name="username" placeholder="Username"
+                ngModel #usernameInput="ngModel" required> 
+            <input type="password" name="password" placeholder="Password"
+                ngModel #passwordInput="ngModel" required> 
+            
+            <input type="submit" name="" value="Register">
+        <div class="col-md-12">
+            <a routerLink="/login">
+                <img class="logo" src="../../../assets/images/logo.png">
+            </a>
+        </div>
+    </form>
+
+</body>

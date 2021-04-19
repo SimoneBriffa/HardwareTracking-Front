@@ -1,0 +1,19 @@
+<body>
+    <form class="box" action="" method="post"
+         #addItemForm="ngForm" (ngSubmit)="addItem(addItemForm)">
+        <h1>Add new item</h1>
+             <input type="text" name="model" placeholder="Model" required ngModel> 
+            <input type="text" name="license" placeholder="License" required ngModel> 
+            <input type="text" name="codes" placeholder="Codes" required ngModel> 
+                <!--<input type="text" class="form-control" id="exampleInputPassword1" name="email"
+                    placeholder="Enter email" required ngModel class="form-control">-->
+                <small style="color: aliceblue;"><p style="margin-bottom:1px;">Insert codes for all models</p>
+                        <p>(please separate each code with columns)</p>
+                    </small>
+            
+            <input type="submit" name="" value="Add Item(s)">
+        <div class="col-md-12">
+        </div>
+    </form>
+
+</body>

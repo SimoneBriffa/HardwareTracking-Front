@@ -1,0 +1,15 @@
+.contenitore{
+    margin-left: 600px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 12vh;
+    max-height: 60vh;
+    align-items: center;
+}
+
+
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}

@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100vw ! important;
+}
+h6{
+    color: floralwhite;
+    text-align: center;
+}

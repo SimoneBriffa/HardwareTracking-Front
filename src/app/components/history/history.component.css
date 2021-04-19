@@ -1,0 +1,32 @@
+table{
+    width: 700px;
+}
+
+.contenitore{
+    margin-left: 500px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    margin-top: 15vh;
+    max-height: 60vh;
+    align-items: center;
+}
+
+.item1{
+    order: 1;
+}
+
+.item2{
+    order: 2;
+    margin-bottom: 15px;
+}
+
+.item3{
+    order: 3;
+    overflow-y: auto;    
+    overflow-x: hidden;  
+}
+
+
+

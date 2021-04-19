@@ -1,0 +1,24 @@
+@import 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css';
+@import 'https://use.fontawesome.com/releases/v5.8.1/css/all.css';
+@import '~angular-notifier/styles';
+@import 'https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@500&display=swap';
+
+.alert{
+    width: 10vw;
+    margin-top: 50vh;
+    margin-left: 50vw;
+}
+
+body {
+    width: 100vw;
+    margin: -1rem;
+}
+
+#cont-table {
+    margin-top: 25vh;
+    max-height: 60vh;
+    overflow-y: auto;    
+    overflow-x: hidden;  
+}
+
+

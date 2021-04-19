@@ -1,0 +1,50 @@
+<div>
+    <div class="contenitore">
+
+    <div class="item1">
+        <h3>Download History</h3>
+    </div>
+
+    <div class="btn-group item2" role="group" aria-label="Button group with nested dropdown">
+        <button type="button" style="margin-right: 10px;"
+            class="btn btn-outline-primary my-2 my-sm-0" (click)="downloadHistory()">General</button>
+            <button type="button" class="btn btn-outline-primary my-2 my-sm-0"
+                (click)="downloadItemHistory(itemForHistory)">Specific</button>
+            <div class="btn-group" role="group">
+                <select [(ngModel)]="itemForHistory" type="button" class="btn btn-secondary">
+                    Choose item
+                    <option *ngFor="let item of items" class="dropdown-item"
+                            class="form-control" [ngValue]="item" name="selection">
+                            {{item.code}}</option>
+                </select>
+            </div>
+    </div>
+
+    <div class="item3">
+        <table class="table table-bordered" >
+                <tr id="pd" class="thead-dark">
+                    <th>Serial Number</th>
+                    <th>Model</th>
+                    <th>Operation Code</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Delivery Mode</th>
+                    <th>Delivery Date</th>
+                    <th>Return Date</th>
+                </tr>
+                <tr *ngFor="let loan of history">
+                    <td><b>{{loan.item.code}}</b></td>
+                    <td>{{loan.item.model}}</td>
+                    <td>{{loan.operationCode}}</td>
+                    <td>{{loan.firstName}}</td>
+                    <td>{{loan.lastName}}</td>
+                    <td>{{loan.deliveryMode}}</td>
+                    <td>{{loan.deliveryDate}}</td>
+                    <td>{{loan.returnDate}}</td>
+                </tr>
+        </table>
+    </div>
+</div>
+
+</div>
+    

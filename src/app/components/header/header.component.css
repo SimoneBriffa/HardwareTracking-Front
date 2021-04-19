@@ -1,0 +1,21 @@
+nav {
+    height: 12vh;
+    width: 100vw;
+    position:fixed
+}
+.image{
+    margin-left: 1px;
+    width: 180px;
+    padding-bottom: 5px;
+}
+
+.pulsante{
+    margin-right: 10px;
+}
+
+h3{
+    color: floralwhite;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding-top: 10px;
+    font-family: Cormorant;
+}
